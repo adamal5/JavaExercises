@@ -6,7 +6,7 @@ package com.qa;
  */
 public class App 
 {
-    public void Student
+    public void Student{
 }
     public static void main( String[] args )
     {
