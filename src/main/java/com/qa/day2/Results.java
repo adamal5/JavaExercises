@@ -1,9 +1,9 @@
 package com.qa.day2;
 
 public class Results {
-    String physics;
-    String chemistry;
-    String biology;
+    int physics;
+    int chemistry;
+    int biology;
     int total;
     int percentage;
 }
