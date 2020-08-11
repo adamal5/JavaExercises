@@ -6,8 +6,7 @@ package com.qa;
  */
 public class App 
 {
-    public void Student{
-}
+
     public static void main( String[] args )
     {
         System.out.println( "Hello Everyone!" );
