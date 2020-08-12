@@ -15,7 +15,10 @@ public class Arrays {
         numArray[7]= 16;
         numArray[8]= 14;
         numArray[9]= 12;
-        numArray[10]= 11;
+
+        for (int i= 0; i <= numArray.length; i++){
+            System.out.println(numArray[i]);
+        }
 
     }
 }
