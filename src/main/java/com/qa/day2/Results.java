@@ -21,9 +21,20 @@ public class Results {
         double chemPercent = (chemistry/150) *100;
         double physPercent = (physics/150) *100;
         System.out.println("Your overall percentage is " + percentage);
+
+        // Individual exam results
         if (percentage >= 60 && bioPercent >=60 && chemPercent >=60 && physPercent >=60){
-            System.out.println("You passed!");
-        } else {
+            System.out.println("You passed!");}
+            else if(percentage >= 60 && bioPercent >=60 && chemPercent >=60 && physPercent <60){
+                System.out.println("You have failed to pass your Physics exam, contact the Physics department.");
+            }
+            else if(percentage >= 60 && bioPercent >=60 && chemPercent <60 && physPercent >=60){
+                System.out.println("You have failed to pass your Chemistry exam, contact the Chemistry department.");
+            }
+            else if(percentage >= 60 && bioPercent <60 && chemPercent >=60 && physPercent >= 60){
+                System.out.println("You have failed to pass your Biology exam, contact the Biology department.");
+            }
+        else {
             System.out.println("You've failed, please contact your department");
         }
     }
