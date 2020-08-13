@@ -9,7 +9,7 @@ public class Coins {
         if (change > 0) {
             System.out.println("Give customer the following change:");
 
-            if (intPart>=5 && intPart <10){
+            if (intPart%10 == 5){
                 System.out.println("1 £5 Note");
             }if (intPart>10 && intPart<20){
                 System.out.println("1 £10 Note");
@@ -19,12 +19,15 @@ public class Coins {
                 System.out.println("1 £20 Note");
                 System.out.println("1 £10 Note");
             }
+            if (intPart>40 && intPart<50){
+                System.out.println("2 £20 Note");
+            }
         }
 
 
     }
 
     public static void main(String[] args) {
-        getChange(15.00, 20.00);
+        getChange(25.00, 50.00);
     }
 }
