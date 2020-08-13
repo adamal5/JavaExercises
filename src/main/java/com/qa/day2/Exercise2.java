@@ -3,7 +3,7 @@ package com.qa.day2;
 public class Exercise2 {
 
     public static void main(String[] args) {
-        int A = 7000;
+        int A = 10000;
         //Start
 
         if (A > 2000) {

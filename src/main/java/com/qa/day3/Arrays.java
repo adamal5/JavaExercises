@@ -3,6 +3,7 @@ package com.qa.day3;
 public class Arrays {
 
     public static int [] numArray = new int[10];
+    public static int [] num2Array;
 
     public static void main(String[] args) {
         numArray[0]= 1;
@@ -20,5 +21,6 @@ public class Arrays {
             System.out.println(numArray[i]);
         }
 
+        //for (int i = 0; i <= )
     }
 }
