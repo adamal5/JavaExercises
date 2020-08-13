@@ -7,6 +7,10 @@ public class Coins {
         int intPart = (int) change;
         int units = intPart % 10;
         int tens = (intPart - units) / 10;
+        double penceConverted = (change- intPart) *100;
+        double pencePennies = penceConverted % 10;
+        double penceTens = (penceConverted-pencePennies) /10;
+
         if (change > 0) {
             System.out.println("Give customer the following change:");
 
@@ -44,7 +48,7 @@ public class Coins {
                     System.out.println("1 £10 Note");
                 }
             }
-            // COINS
+            // POUND COINS
                 if (units == 4 || units ==9) {
                     System.out.println("2 £2 Coins");
                 }
@@ -58,11 +62,44 @@ public class Coins {
                 if (units == 1 || units == 6) {
                     System.out.println("1 £1 Coin");
                 }
+            // PENCE TENS
 
+            if (penceConverted % 10 >= 5) {
+                System.out.println("1 50p Coin");
+            }
+            if (penceTens == 1) {
+                System.out.println("1 10p Coin");
+            }
+            if (penceTens == 2) {
+                System.out.println("1 20p Coin");
+            }
+            if (penceTens == 3) {
+                System.out.println("1 10p Coin");
+                System.out.println("1 20p Coin");
+            }
+            if (penceTens == 4) {
+                System.out.println("2 20p Coins");
+            }
+            if (penceTens >= 5) {
+                System.out.println("1 50p COin");
+                if (penceTens == 6) {
+                    System.out.println("1 10p Coin");
+                }
+                if (penceTens == 7) {
+                    System.out.println("1 20p Coins");
+                }
+                if (penceTens == 8) {
+                    System.out.println("1 20p Coin");
+                    System.out.println("1 10p Coin");
+                }
+                if (penceTens == 9) {
+                    System.out.println("2 20p Coins");
+                }
+            }
         }
     }
 
     public static void main(String[] args) {
-        getChange(23.00, 50.00);
+        getChange(23.78, 50.00);
     }
 }
