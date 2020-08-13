@@ -24,7 +24,7 @@ public class ScannerCalculator {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter your Operation (addition(a), subtraction (s), multiplication(m), division(d): ");
+        System.out.println("Enter your Operation (addition(a), subtraction (s), multiplication(m), division(d)): ");
         String operation = scan.nextLine();
 
         System.out.println("Enter number 1: ");

@@ -2,40 +2,64 @@ package com.qa.day3;
 
 public class Coins {
 
-    public static void getChange(double cost, double amount){
+    public static void getChange(double cost, double amount) {
         double change = amount - cost;
         int intPart = (int) change;
         int units = intPart % 10;
-
+        int tens = (intPart - units) / 10;
         if (change > 0) {
             System.out.println("Give customer the following change:");
 
-            if (intPart%10 >= 5){
+//      NOTES
+            if (intPart % 10 >= 5) {
                 System.out.println("1 £5 Note");
-            }if (intPart>10 && intPart<20){
+            }
+            if (tens == 1) {
                 System.out.println("1 £10 Note");
-            }if (intPart>20 && intPart<30){
+            }
+            if (tens == 2) {
                 System.out.println("1 £20 Note");
-            }if (intPart>30 && intPart<40){
+            }
+            if (tens == 3) {
                 System.out.println("1 £20 Note");
                 System.out.println("1 £10 Note");
             }
-            if (intPart>40 && intPart<50){
+            if (tens == 4) {
                 System.out.println("2 £20 Note");
             }
-            if (units==4){
-                System.out.println( "2 £2 Coins");
+            if (tens >= 5) {
+                System.out.println("1 £50 NOte");
+                if (tens == 6) {
+                    System.out.println("1 £10 Note");
+                }
+                if (tens == 7) {
+                    System.out.println("1 £20 Note");
+                }
+                if (tens == 8) {
+                    System.out.println("1 £20 Note");
+                    System.out.println("1 £10 Note");
+                }
+                if (tens == 9) {
+                    System.out.println("2 £20 Notes");
+                    System.out.println("1 £10 Note");
+                }
             }
-            if (units==3){
-                System.out.println( "1 £2 Coins");
-                System.out.println( "1 £1 Coins");
-            }
-            if (units ==2){
-                System.out.println("1 ");
-            }
+            // COINS
+                if (units == 4 || units ==9) {
+                    System.out.println("2 £2 Coins");
+                }
+                if (units == 3 || units == 8) {
+                    System.out.println("1 £2 Coin");
+                    System.out.println("1 £1 Coin");
+                }
+                if (units == 2 || units == 7) {
+                    System.out.println("1 £2 Coin");
+                }
+                if (units == 1 || units == 6) {
+                    System.out.println("1 £1 Coin");
+                }
+
         }
-
-
     }
 
     public static void main(String[] args) {
