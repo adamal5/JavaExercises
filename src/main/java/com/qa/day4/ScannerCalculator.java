@@ -5,7 +5,7 @@ public class ScannerCalculator {
 
     public static void addition(int a, int b){
         int result= a+b;
-        System.out.println(result);
+        System.out.println("The answer is: " +result);
     }
     public static void subtraction(int a, int b){
         int result= a-b;
