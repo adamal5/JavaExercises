@@ -1,5 +1,5 @@
 package com.qa.day3;
-
+import java.util.Scanner;
 public class Coins {
 
     public static void getChange(double cost, double amount) {
@@ -123,6 +123,14 @@ public class Coins {
     }
 
     public static void main(String[] args) {
-        getChange(20.00, 20.00);
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Please enter the total cost: ");
+        double cost = scan.nextDouble();
+
+        System.out.println("Please enter the total amount given: ");
+        double amount = scan.nextDouble();
+
+        getChange(cost, amount);
     }
 }
