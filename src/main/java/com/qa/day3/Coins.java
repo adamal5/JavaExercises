@@ -9,15 +9,13 @@ public class Coins {
         int tens = (intPart - units) / 10;
         double penceConverted = (change- intPart) *100;
         double pencePennies = penceConverted % 10;
+        int updatedPencePenies = (int) pencePennies;
         double penceTens = (penceConverted-pencePennies) /10;
 
         if (change > 0) {
-            System.out.println("Give customer the following change:");
+            System.out.println("Give customer the following: £" + change);
 
 //      NOTES
-            if (intPart % 10 >= 5) {
-                System.out.println("1 £5 Note");
-            }
             if (tens == 1) {
                 System.out.println("1 £10 Note");
             }
@@ -47,6 +45,11 @@ public class Coins {
                     System.out.println("2 £20 Notes");
                     System.out.println("1 £10 Note");
                 }
+
+            }
+            // 5 note
+            if (intPart % 10 >= 5) {
+                System.out.println("1 £5 Note");
             }
             // POUND COINS
                 if (units == 4 || units ==9) {
@@ -74,8 +77,8 @@ public class Coins {
                 System.out.println("1 20p Coin");
             }
             if (penceTens == 3) {
-                System.out.println("1 10p Coin");
                 System.out.println("1 20p Coin");
+                System.out.println("1 10p Coin");
             }
             if (penceTens == 4) {
                 System.out.println("2 20p Coins");
@@ -95,11 +98,31 @@ public class Coins {
                 if (penceTens == 9) {
                     System.out.println("2 20p Coins");
                 }
-            }
+            } // Pennies COINS
+                if (updatedPencePenies >=5 ){
+                    System.out.println("1 5p Coin");
+                }
+                if (updatedPencePenies == 4 || updatedPencePenies ==9) {
+                System.out.println("2 2p Coins");
+                }
+                 if (updatedPencePenies == 3 || updatedPencePenies == 8) {
+                System.out.println("1 2p Coin");
+                System.out.println("1 1p Coin");
+                 }
+                if (updatedPencePenies == 2 || updatedPencePenies == 7) {
+                System.out.println("1 2p Coin");
+                }
+                if (updatedPencePenies == 1 || updatedPencePenies == 6) {
+                System.out.println("1 1p Coin");
+                }
+
+        }
+        else {
+            System.out.println("No Change");
         }
     }
 
     public static void main(String[] args) {
-        getChange(23.78, 50.00);
+        getChange(20.00, 20.00);
     }
 }
