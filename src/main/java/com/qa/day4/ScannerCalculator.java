@@ -9,17 +9,17 @@ public class ScannerCalculator {
     }
     public static void subtraction(int a, int b){
         int result= a-b;
-        System.out.println(result);
+        System.out.println("The answer is: " + result);
 
     }
     public static void multiplication(int a, int b){
         int result= a*b;
-        System.out.println(result);
+        System.out.println("The answer is: " +result);
     }
 
     public static void division(int a, int b){
         int result= a/b;
-        System.out.println(result);
+        System.out.println("The answer is: " +result);
     }
 
     public static void main(String[] args) {
@@ -33,7 +33,19 @@ public class ScannerCalculator {
         int num2 = scan.nextInt();
 
         if (operation.equals("a")){
+        addition(num1,num2);
+        }
 
+        if (operation.equals("s")){
+            subtraction(num1,num2);
+        }
+
+        if (operation.equals("m")){
+            multiplication(num1,num2);
+        }
+
+        if (operation.equals("d")){
+            division(num1,num2);
         }
 
 
@@ -41,4 +53,3 @@ public class ScannerCalculator {
     }
 
     }
-}
