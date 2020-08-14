@@ -67,9 +67,7 @@ public class Coins {
                 }
             // PENCE TENS
 
-            if (penceConverted % 10 >= 5) {
-                System.out.println("1 50p Coin");
-            }
+
             if (penceTens == 1) {
                 System.out.println("1 10p Coin");
             }
