@@ -20,16 +20,13 @@ public class Atbash {
                 }
             }
         }
-
     }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter your word: ");
+        System.out.println("Please enter your word in lowercase: ");
         String word= scan.nextLine();
         getCharacters(word);
-
-
 
     }
 
