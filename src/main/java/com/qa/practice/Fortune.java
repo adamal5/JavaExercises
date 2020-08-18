@@ -14,19 +14,19 @@ public class Fortune {
 
     public static String advice(int number){
         if (number == 1){
-            return "Your life will be filled with great mystery";
+            return "Your life will be filled with great mystery!";
         }
         else if (number == 2){
-            return "One cannot pour from an empty cup, replenish yourself in order to replenish the world";
+            return "One cannot pour from an empty cup, replenish yourself in order to replenish the world!";
         }
         else if (number == 3){
-            return "First seek the greatness within you then the greatness of the universe will become apparent";
+            return "First seek the greatness within you then the greatness of the universe will become apparent!";
         }
         else if (number == 4){
-            return "You are love, you'd do well to remember that";
+            return "You are love, you'd do well to remember that!";
         }
         else {
-            return "Take a leap of faith, explore, enjoy. Youre never to old to live life";
+            return "Take a leap of faith, explore, enjoy. You're never to old to live life!";
         }
     }
 
