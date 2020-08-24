@@ -3,10 +3,11 @@ package com.qa.tddPractice;
 public class Email {
 
     public static boolean isValidEmail(String email) {
-        boolean boolo = true;
+        boolean boolo = false;
         if (email.endsWith("@qa.com") || email.endsWith("@gmail.com")) {
-            if (email.startsWith("@") | email.startsWith("_") | email.endsWith(")")) {
-                boolo= false;}
+            if (!email.startsWith("@") | !email.startsWith("_") | !email.endsWith(")")) {
+                boolo= true;}
+            else {boolo=false;}
         }
         else {boolo= true;}
         return boolo;
